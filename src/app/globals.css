@@ -32,3 +32,48 @@ body {
     transform: translateY(-15px);
   }
 }
+
+@keyframes aurora-1 {
+  0%,
+  100% {
+    transform: translate3d(-10%, -5%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(15%, 10%, 0) scale(1.15);
+  }
+}
+
+@keyframes aurora-2 {
+  0%,
+  100% {
+    transform: translate3d(10%, 5%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-15%, -10%, 0) scale(1.2);
+  }
+}
+
+@keyframes aurora-3 {
+  0%,
+  100% {
+    transform: translate3d(0, 10%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(10%, -10%, 0) scale(1.1);
+  }
+}
+
+.aurora-1 {
+  animation: aurora-1 12s ease-in-out infinite;
+}
+
+.aurora-2 {
+  animation: aurora-2 16s ease-in-out infinite;
+}
+
+.aurora-3 {
+  animation: aurora-3 20s ease-in-out infinite;
+}

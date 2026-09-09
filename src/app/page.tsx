@@ -173,10 +173,10 @@ export default function Home() {
         id="beranda"
         className="scroll-mt-24 mx-auto max-w-6xl px-6 pb-20 pt-20 sm:px-10 sm:pb-28 sm:pt-28"
       >
-        <div className="grid grid-cols-1 gap-12 pt-3.5 shadow-sm shadow-white sm:grid-cols-12">
+        <div className="grid grid-cols-1 gap-12 pt-3.5 sm:grid-cols-12">
           {/* Foto */}
           <div className="relative animate-[float_4s_ease-in-out_infinite] sm:col-span-5">
-            <div className="group aspect-[4/5] w-full overflow-hidden rounded-2xl border border-[#9697a8] bg-[#F4F5F0]">
+            <div className="group aspect-[4/5] w-full overflow-hidden rounded-2xl border border-[#475569] bg-[#E2E8F0]">
               <img
                 src="/cogan.jpeg"
                 alt="Reno Wahyu"
@@ -187,17 +187,17 @@ export default function Home() {
 
           {/* Deskripsi */}
           <div className="sm:col-span-7">
-            <h1 className="font-display text-4xl leading-tight text-[#e2ebe1] sm:text-5xl">
+            <h1 className="font-display text-4xl leading-tight text-[#F1F5F9] sm:text-5xl">
               Halo, saya Reno.
             </h1>
 
-            <p className="mt-6 max-w-md leading-relaxed text-[#d7dbd0]">
+            <p className="mt-6 max-w-md leading-relaxed text-[#CBD5E1]">
               Saya adalah pelajar SMK berusia 16 tahun yang tinggal di Kota
               Pasuruan. Saya memiliki ketertarikan pada dunia desain,
               teknologi, dan pengembangan kreativitas.
             </p>
 
-            <p className="mt-6 max-w-md leading-relaxed text-[#d7dbd0]">
+            <p className="mt-6 max-w-md leading-relaxed text-[#CBD5E1]">
               Sebagai pelajar, saya terus belajar dan mengembangkan
               kemampuan saya melalui berbagai proyek dan pengalaman. Saya
               percaya bahwa setiap proyek adalah kesempatan untuk belajar
@@ -205,7 +205,7 @@ export default function Home() {
               karya yang lebih baik.
             </p>
 
-            <p className="mt-4 max-w-md leading-relaxed text-[#d7dbd0]">
+            <p className="mt-4 max-w-md leading-relaxed text-[#CBD5E1]">
               Di luar kegiatan sekolah, saya juga senang mengeksplorasi
               hal-hal baru yang berkaitan dengan teknologi dan desain.
               Hal-hal tersebut membantu saya menemukan inspirasi serta
@@ -216,9 +216,9 @@ export default function Home() {
       </section>
 
       {/* ================= TENTANG ================= */}
-      <section id="tentang" className="scroll-mt-24 border-t border-[#E7E3DC] bg-[#323249]">
+      <section id="tentang" className="scroll-mt-24 border-t border-[#334155] bg-[#0F172A]">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
-          <h2 className="font-display text-3xl text-[#e2ebe1] sm:text-4xl">
+          <h2 className="font-display text-3xl text-[#F1F5F9] sm:text-4xl">
             Cara saya bekerja
           </h2>
 
@@ -229,18 +229,18 @@ export default function Home() {
                 className="
                   rounded-2xl
                   border
-                  border-[#84cce7]
-                  bg-[#323249]
+                  border-[#38BDF8]
+                  bg-[#0F172A]
                   p-6
                   shadow-sm
-                  shadow-blue-500
-                  text-[#d7c8c8]
+                  shadow-sky-500/20
+                  text-[#CBD5E1]
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:border-[#D8DED3]
-                  hover:bg-[#E9EDE6]
-                  hover:text-[#121312]
+                  hover:border-[#60A5FA]
+                  hover:bg-[#E0F2FE]
+                  hover:text-[#020617]
                   font-bold
                 "
               >
@@ -265,13 +265,13 @@ export default function Home() {
         </div>
 
         {/* Pengalaman */}
-        <div className="border-t border-[#45455F]">
+        <div className="border-t border-[#1E293B]">
           <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
-            <h2 className="font-display text-3xl text-[#dce7da] sm:text-4xl">
+            <h2 className="font-display text-3xl text-[#E2E8F0] sm:text-4xl">
               Pengalaman
             </h2>
 
-            <div className="mt-10 divide-y divide-[#45455F] border-t border-[#45455F]">
+            <div className="mt-10 divide-y divide-[#1E293B] border-t border-[#1E293B]">
               {experience.map((e) => (
                 <div
                   key={e.role}
@@ -283,21 +283,21 @@ export default function Home() {
                     py-6
                     transition-colors
                     duration-300
-                    hover:bg-[#3A3A52]
+                    hover:bg-[#172554]
                     sm:flex-row
                     sm:items-center
                     sm:justify-between
                   "
                 >
                   <div>
-                    <h3 className="font-display text-xl text-[#ccdbca]">
+                    <h3 className="font-display text-xl text-[#BAE6FD]">
                       {e.role}
                     </h3>
 
-                    <p className="text-sm text-[#cacfc1]">{e.place}</p>
+                    <p className="text-sm text-[#94A3B8]">{e.place}</p>
                   </div>
 
-                  <span className="text-sm text-[#cad2c0]">{e.period}</span>
+                  <span className="text-sm text-[#94A3B8]">{e.period}</span>
                 </div>
               ))}
             </div>
@@ -306,18 +306,18 @@ export default function Home() {
       </section>
 
       {/* ================= KARYA ================= */}
-      <section id="karya" className="scroll-mt-24 border-t border-[#E7E3DC]">
+      <section id="karya" className="scroll-mt-24 border-t border-[#334155]">
         <div className="mx-auto max-w-6xl px-6 pb-24 pt-20 sm:px-10 sm:pb-32 sm:pt-28">
-          <h1 className="font-display text-4xl text-[#e6e0e0] sm:text-5xl">
+          <h1 className="font-display text-4xl text-[#F1F5F9] sm:text-5xl">
             Karya
           </h1>
 
-          <p className="mt-4 max-w-md leading-relaxed text-[#ced2c9]">
+          <p className="mt-4 max-w-md leading-relaxed text-[#94A3B8]">
             Sebagian proyek yang pernah saya kerjakan, dari produk digital
             sampai identitas visual.
           </p>
 
-          <div className="mt-16 divide-y divide-[#E7E3DC] border-t border-[#E7E3DC]">
+          <div className="mt-16 divide-y divide-[#334155] border-t border-[#334155]">
             {projects.map((p) => (
               <a
                 key={p.no}
@@ -331,14 +331,14 @@ export default function Home() {
                   py-8
                   transition-all
                   duration-300
-                  hover:bg-[#E9EDE6]/60
+                  hover:bg-[#E0F2FE]/60
                   sm:flex-row
                   sm:items-center
                   sm:justify-between
                 "
               >
                 <div className="flex min-w-0 flex-1 items-baseline gap-6">
-                  <span className="shrink-0 text-sm text-[#d1d4cc]">
+                  <span className="shrink-0 text-sm text-[#94A3B8]">
                     {p.no}
                   </span>
 
@@ -346,11 +346,11 @@ export default function Home() {
                     className="
                       font-display
                       text-2xl
-                      text-[#ced9cc]
+                      text-[#E2E8F0]
                       transition-all
                       duration-300
                       group-hover:italic
-                      group-hover:text-[#3F493E]
+                      group-hover:text-[#0F172A]
                       sm:text-3xl
                     "
                   >
@@ -366,7 +366,7 @@ export default function Home() {
                     gap-y-1
                     pl-10
                     text-sm
-                    text-[#cfd4c9]
+                    text-[#94A3B8]
                     sm:pl-0
                     sm:min-w-[330px]
                   "
@@ -390,9 +390,9 @@ export default function Home() {
                     h-40
                     w-full
                     rounded-lg
-                    bg-[#E9EDE6]
+                    bg-[#E0F2FE]
                     shadow-md
-                    shadow-blue-500
+                    shadow-sky-500/20
                     sm:h-32
                     sm:w-52
                     sm:shrink-0
@@ -423,7 +423,7 @@ export default function Home() {
           scroll-mt-24
           mx-auto
           max-w-6xl
-          bg-[#323249]
+          bg-gradient-to-br from-[#0F172A] via-[#111827] to-[#172554]
           px-6
           pb-24
           pt-20
@@ -432,21 +432,21 @@ export default function Home() {
           sm:pt-28
         "
       >
-        <div className="border-b border-[#DCD9D0] pb-12">
+        <div className="border-b border-[#475569] pb-12">
           <h1
             className="
               font-display
               text-5xl
               leading-[0.95]
               tracking-tight
-              text-[#E0E6DC]
+              text-[#E2E8F0]
               sm:text-6xl
             "
           >
             Keahlian
           </h1>
 
-          <p className="mt-4 max-w-md text-sm leading-7 text-[#E7E9E1]">
+          <p className="mt-4 max-w-md text-sm leading-7 text-[#CBD5E1]">
             Kombinasi kemampuan yang saya pakai dari awal riset sampai serah
             terima ke tim engineering.
           </p>
@@ -465,17 +465,17 @@ export default function Home() {
                 overflow-hidden
                 rounded-[28px]
                 border
-                border-[#DDDAD1]
-                bg-[#323249]
+                border-[#475569]
+                bg-[#0F172A]
                 p-7
                 text-white
                 shadow-sm
-                shadow-blue-500
+                shadow-sky-500/20
                 transition-all
                 duration-500
                 hover:-translate-y-2
-                hover:border-[#B9BDAF]
-                hover:bg-[#F9F9F4]
+                hover:border-[#38BDF8]
+                hover:bg-[#F8FAFC]
                 hover:text-gray-800
                 hover:shadow-[0_20px_50px_rgba(48,52,43,0.09)]
                 sm:p-8
@@ -490,7 +490,7 @@ export default function Home() {
                   h-32
                   w-32
                   rounded-full
-                  bg-[#E7E9DF]
+                  bg-[#172554]
                   transition-transform
                   duration-500
                   group-hover:scale-150
@@ -503,10 +503,10 @@ export default function Home() {
                     font-display
                     text-5xl
                     leading-none
-                    text-[#D8DAD0]
+                    text-[#64748B]
                     transition-colors
                     duration-500
-                    group-hover:text-[#B7BCAA]
+                    group-hover:text-[#818CF8]
                   "
                 >
                   {g.number}
@@ -516,14 +516,14 @@ export default function Home() {
                   className="
                     rounded-full
                     border
-                    border-[#D9DCD2]
-                    bg-[#FBFAF6]
+                    border-[#CBD5E1]
+                    bg-[#F8FAFC]
                     px-3
                     py-1
                     text-[10px]
                     uppercase
                     tracking-[0.18em]
-                    text-[#85887E]
+                    text-[#64748B]
                   "
                 >
                   Skill
@@ -536,11 +536,11 @@ export default function Home() {
                     font-display
                     text-2xl
                     tracking-tight
-                    text-[#E0E6DC]
+                    text-[#E2E8F0]
                     transition-transform
                     duration-300
                     group-hover:translate-x-1
-                    group-hover:text-[#3F493E]
+                    group-hover:text-[#0F172A]
                   "
                 >
                   {g.title}
@@ -552,8 +552,8 @@ export default function Home() {
                     max-w-md
                     text-sm
                     leading-6
-                    text-[#BBC1B4]
-                    group-hover:text-[#777A72]
+                    text-[#94A3B8]
+                    group-hover:text-[#60A5FA]
                   "
                 >
                   {g.desc}
@@ -569,16 +569,16 @@ export default function Home() {
                       items-center
                       gap-3
                       border-t
-                      border-[#4A4A60]
+                      border-[#334155]
                       py-3
                       text-sm
-                      text-[#BBC1B4]
+                      text-[#94A3B8]
                       transition-all
                       duration-300
                       first:border-t-0
                       hover:translate-x-1
-                      hover:text-[#394134]
-                      group-hover:border-[#E5E2DA]
+                      hover:text-[#E0F2FE]
+                      group-hover:border-[#334155]
                     "
                   >
                     <span
@@ -587,10 +587,10 @@ export default function Home() {
                         w-1.5
                         shrink-0
                         rounded-full
-                        bg-[#9AA18D]
+                        bg-[#38BDF8]
                         transition-all
                         duration-300
-                        group-hover:bg-[#68715F]
+                        group-hover:bg-[#60A5FA]
                       "
                     />
 
@@ -606,7 +606,7 @@ export default function Home() {
                   left-8
                   h-[2px]
                   w-0
-                  bg-[#707966]
+                  bg-[#818CF8]
                   transition-all
                   duration-500
                   group-hover:w-20
@@ -620,7 +620,7 @@ export default function Home() {
       {/* ================= KONTAK ================= */}
       <section
         id="kontak"
-        className="scroll-mt-24 mx-auto max-w-6xl border-t border-[#E7E3DC] px-6 pb-24 pt-20 sm:px-10 sm:pb-32 sm:pt-28"
+        className="scroll-mt-24 mx-auto max-w-6xl border-t border-[#334155] px-6 pb-24 pt-20 sm:px-10 sm:pb-32 sm:pt-28"
       >
         <h1
           className="
@@ -629,7 +629,7 @@ export default function Home() {
             font-display
             text-4xl
             leading-tight
-            text-[#dfe7dd]
+            text-[#F1F5F9]
             sm:text-6xl
           "
         >
@@ -642,16 +642,16 @@ export default function Home() {
             mt-10
             inline-block
             border-b
-            border-[#191a19]
+            border-[#64748B]
             pb-1
             font-display
             text-2xl
             italic
-            text-[#d5e0d4]
+            text-[#BAE6FD]
             transition-colors
             duration-300
-            hover:border-[#777A72]
-            hover:text-[#777A72]
+            hover:border-[#60A5FA]
+            hover:text-[#60A5FA]
             sm:text-3xl
           "
         >
@@ -666,7 +666,7 @@ export default function Home() {
             gap-x-12
             gap-y-6
             border-t
-            border-[#E7E3DC]
+            border-[#334155]
             pt-10
             sm:grid-cols-3
           "
@@ -684,16 +684,16 @@ export default function Home() {
                 gap-2
                 rounded-xl
                 border
-                border-[#E7E3DC]
+                border-[#334155]
                 p-4
                 transition-all
                 duration-300
-                hover:bg-[#E9EDE6]
+                hover:bg-[#E0F2FE]
               "
             >
-              <span className="text-sm text-[#A2A69D]">{s.label}</span>
+              <span className="text-sm text-[#94A3B8]">{s.label}</span>
 
-              <span className="font-medium text-[#bec2b9] transition-colors duration-300 group-hover:text-[#3F493E]">
+              <span className="font-medium text-[#CBD5E1] transition-colors duration-300 group-hover:text-[#0F172A]">
                 {s.value}
               </span>
             </a>

@@ -34,14 +34,14 @@ export default function RootLayout({
           ${fraunces.variable}
           ${inter.variable}
           font-sans
-          bg-[#F6F4EE]
-          text-[#252922]
+          bg-[#020617]
+          text-[#E2E8F0]
           antialiased
         `}
       >
         <Navbar />
 
-        <main className="min-h-screen bg-[#323249]">
+        <main className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#111827] to-[#172554]">
           {children}
         </main>
 

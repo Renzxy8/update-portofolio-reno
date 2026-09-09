@@ -32,8 +32,6 @@ export default function Navbar() {
         });
       },
       {
-        // Aktif ketika bagian atas section berada di area "pita" ini,
-        // supaya konsisten dengan navbar sticky
         rootMargin: "-45% 0px -50% 0px",
         threshold: 0,
       }
@@ -49,11 +47,16 @@ export default function Navbar() {
     href: string
   ) => {
     e.preventDefault();
+
     const id = href.slice(1);
     const el = document.getElementById(id);
 
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
       history.replaceState(null, "", href);
       setActive(id);
     }
@@ -68,10 +71,10 @@ export default function Navbar() {
         top-0
         z-50
         border-b
-        border-[#45455F]
-        bg-[#323249]/95
-        backdrop-blur-md
-        shadow-[0_4px_20px_rgba(25,25,40,0.12)]
+        border-[#334155]
+        bg-[#020617]/90
+        backdrop-blur-xl
+        shadow-[0_4px_25px_rgba(2,6,23,0.35)]
       "
     >
       <nav
@@ -91,6 +94,7 @@ export default function Navbar() {
           href="#beranda"
           onClick={(e) => handleNavClick(e, "#beranda")}
           className="
+            group
             flex
             items-center
             gap-3
@@ -99,8 +103,8 @@ export default function Navbar() {
             py-1.5
             transition-all
             duration-300
-            hover:bg-[#45455F]
-            hover:shadow-[0_6px_20px_rgba(15,15,30,0.25)]
+            hover:bg-[#0F172A]
+            hover:shadow-[0_6px_20px_rgba(56,189,248,0.12)]
           "
         >
           {/* Foto Profil */}
@@ -112,8 +116,13 @@ export default function Navbar() {
               overflow-hidden
               rounded-full
               border
-              border-[#6A6A7E]
-              bg-[#45455F]
+              border-[#38BDF8]
+              bg-[#0F172A]
+              shadow-[0_0_15px_rgba(56,189,248,0.15)]
+              transition-all
+              duration-300
+              group-hover:border-[#818CF8]
+              group-hover:shadow-[0_0_20px_rgba(129,140,248,0.3)]
             "
           >
             <Image
@@ -127,7 +136,17 @@ export default function Navbar() {
 
           {/* Nama */}
           <div className="hidden sm:block">
-            <p className="font-display text-lg leading-none text-[#EEF2EB]">
+            <p
+              className="
+                font-display
+                text-lg
+                leading-none
+                text-[#E2E8F0]
+                transition-colors
+                duration-300
+                group-hover:text-[#38BDF8]
+              "
+            >
               Reno Wahyu
             </p>
           </div>
@@ -154,15 +173,17 @@ export default function Navbar() {
                   ${
                     isActive
                       ? `
-                        bg-[#45455F]
-                        text-[#F4F6F1]
-                        shadow-[0_6px_20px_rgba(15,15,30,0.28)]
+                        bg-gradient-to-r
+                        from-[#0EA5E9]
+                        to-[#6366F1]
+                        text-white
+                        shadow-[0_6px_20px_rgba(56,189,248,0.25)]
                       `
                       : `
-                        text-[#C5C9C1]
-                        hover:bg-[#3E3E55]
-                        hover:text-[#F4F6F1]
-                        hover:shadow-[0_5px_16px_rgba(15,15,30,0.20)]
+                        text-[#94A3B8]
+                        hover:bg-[#172554]
+                        hover:text-[#E0F2FE]
+                        hover:shadow-[0_5px_16px_rgba(56,189,248,0.12)]
                       `
                   }
                 `}
@@ -184,15 +205,19 @@ export default function Navbar() {
             justify-center
             rounded-full
             border
-            border-[#51516B]
-            text-[#EEF2EB]
+            border-[#334155]
+            bg-[#0F172A]
+            text-[#E2E8F0]
             transition-all
             duration-300
-            hover:bg-[#45455F]
-            hover:shadow-[0_5px_16px_rgba(15,15,30,0.25)]
+            hover:border-[#38BDF8]
+            hover:bg-[#172554]
+            hover:text-[#38BDF8]
+            hover:shadow-[0_5px_16px_rgba(56,189,248,0.2)]
             sm:hidden
           "
           aria-label="Menu"
+          aria-expanded={open}
         >
           <div className="space-y-1.5">
             <span
@@ -200,7 +225,7 @@ export default function Navbar() {
                 block
                 h-[1.5px]
                 w-5
-                bg-[#EEF2EB]
+                bg-current
                 transition-all
                 duration-300
                 ${open ? "translate-y-[4px] rotate-45" : ""}
@@ -212,7 +237,7 @@ export default function Navbar() {
                 block
                 h-[1.5px]
                 w-5
-                bg-[#EEF2EB]
+                bg-current
                 transition-all
                 duration-300
                 ${open ? "-translate-y-[2px] -rotate-45" : ""}
@@ -226,10 +251,15 @@ export default function Navbar() {
       <div
         className={`
           overflow-hidden
+          bg-[#020617]/95
           transition-all
           duration-300
           sm:hidden
-          ${open ? "max-h-96 border-t border-[#45455F]" : "max-h-0"}
+          ${
+            open
+              ? "max-h-96 border-t border-[#334155]"
+              : "max-h-0"
+          }
         `}
       >
         <div className="px-6 py-4">
@@ -253,18 +283,20 @@ export default function Navbar() {
                   ${
                     isActive
                       ? `
-                        border-[#5B5B73]
-                        bg-[#45455F]
+                        border-[#38BDF8]
+                        bg-gradient-to-r
+                        from-[#0F172A]
+                        to-[#172554]
                         px-4
-                        text-[#F4F6F1]
-                        shadow-[0_6px_18px_rgba(15,15,30,0.25)]
+                        text-[#E0F2FE]
+                        shadow-[0_6px_18px_rgba(56,189,248,0.15)]
                       `
                       : `
-                        border-[#45455F]
-                        text-[#C5C9C1]
-                        hover:bg-[#3E3E55]
+                        border-[#1E293B]
+                        text-[#94A3B8]
+                        hover:bg-[#0F172A]
                         hover:px-4
-                        hover:text-[#F4F6F1]
+                        hover:text-[#38BDF8]
                       `
                   }
                 `}

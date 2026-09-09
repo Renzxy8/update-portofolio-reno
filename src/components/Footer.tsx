@@ -3,9 +3,9 @@ export default function Footer() {
     <footer
       className="
         border-t
-        border-[#45455F]
-        bg-[#323249]
-        text-[#EEF2EB]
+        border-[#334155]
+        bg-[#020617]
+        text-[#E2E8F0]
       "
     >
       <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-24">
@@ -19,7 +19,7 @@ export default function Footer() {
               font-medium
               uppercase
               tracking-[0.25em]
-              text-[#9FA49A]
+              text-[#38BDF8]
             "
           >
             Mari bekerja sama
@@ -33,7 +33,7 @@ export default function Footer() {
               text-4xl
               leading-[1.05]
               tracking-tight
-              text-[#F1F3EE]
+              text-[#F1F5F9]
               sm:text-6xl
             "
           >
@@ -46,7 +46,7 @@ export default function Footer() {
               max-w-lg
               text-sm
               leading-7
-              text-[#B8BCB4]
+              text-[#94A3B8]
             "
           >
             Saya terbuka untuk berdiskusi mengenai ide, desain,
@@ -64,20 +64,21 @@ export default function Footer() {
               gap-3
               rounded-full
               border
-              border-[#62627A]
-              bg-[#45455F]
+              border-[#38BDF8]
+              bg-[#0F172A]
               px-6
               py-3
               text-sm
               font-medium
-              text-[#F4F6F1]
-              shadow-[0_8px_25px_rgba(15,15,30,0.25)]
+              text-[#E0F2FE]
+              shadow-[0_8px_25px_rgba(56,189,248,0.12)]
               transition-all
               duration-300
               hover:-translate-y-1
-              hover:border-[#7C7C91]
-              hover:bg-[#50506A]
-              hover:shadow-[0_12px_30px_rgba(15,15,30,0.4)]
+              hover:border-[#818CF8]
+              hover:bg-[#172554]
+              hover:text-white
+              hover:shadow-[0_12px_30px_rgba(129,140,248,0.25)]
             "
           >
             Mari mulai percakapan
@@ -101,18 +102,18 @@ export default function Footer() {
           className="
             mt-20
             border-t
-            border-[#45455F]
+            border-[#334155]
             pt-8
           "
         >
 
           {/* ================= COPYRIGHT ================= */}
           <div>
-            <p className="text-sm text-[#B8BCB4]">
+            <p className="text-sm text-[#94A3B8]">
               © {new Date().getFullYear()} Reno Wahyu
             </p>
 
-            <p className="mt-1 text-xs text-[#777B75]">
+            <p className="mt-1 text-xs text-[#64748B]">
               UI/UX & Graphic Designer
             </p>
           </div>
@@ -141,10 +142,10 @@ export default function Footer() {
               <a
                 href="mailto:renow381@gmail.com"
                 className="
-                  text-[#B8BCB4]
+                  text-[#94A3B8]
                   transition-colors
                   duration-300
-                  hover:text-[#F4F6F1]
+                  hover:text-[#38BDF8]
                 "
               >
                 Email - renow381@gmail.com
@@ -154,10 +155,10 @@ export default function Footer() {
               <a
                 href="tel:+6283182312150"
                 className="
-                  text-[#B8BCB4]
+                  text-[#94A3B8]
                   transition-colors
                   duration-300
-                  hover:text-[#F4F6F1]
+                  hover:text-[#38BDF8]
                 "
               >
                 Telepon - +62 831-807-480
@@ -169,10 +170,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="
-                  text-[#B8BCB4]
+                  text-[#94A3B8]
                   transition-colors
                   duration-300
-                  hover:text-[#F4F6F1]
+                  hover:text-[#38BDF8]
                 "
               >
                 WhatsApp - +62 831-8231-2150
@@ -190,10 +191,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="
-                  text-[#B8BCB4]
+                  text-[#94A3B8]
                   transition-colors
                   duration-300
-                  hover:text-[#F4F6F1]
+                  hover:text-[#818CF8]
                 "
               >
                 Instagram - @renowahyu_f
@@ -205,10 +206,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="
-                  text-[#B8BCB4]
+                  text-[#94A3B8]
                   transition-colors
                   duration-300
-                  hover:text-[#F4F6F1]
+                  hover:text-[#818CF8]
                 "
               >
                 TikTok - @zyvoria.airen
@@ -220,10 +221,10 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 className="
-                  text-[#B8BCB4]
+                  text-[#94A3B8]
                   transition-colors
                   duration-300
-                  hover:text-[#F4F6F1]
+                  hover:text-[#818CF8]
                 "
               >
                 YouTube - @whandrt
