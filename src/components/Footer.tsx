@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Tombol Kontak */}
           <a
-            href="#kontak"
+            href="/contact"
             className="
               group
               mt-8
