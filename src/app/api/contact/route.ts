@@ -1,12 +1,33 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(
-  process.env.RESEND_API_KEY
-);
-
 export async function POST(request: Request) {
   try {
+    // Ambil environment variables
+    const apiKey = process.env.RESEND_API_KEY;
+    const fromEmail =
+      process.env.RESEND_FROM_EMAIL ||
+      "Portfolio <onboarding@resend.dev>";
+    const toEmail =
+      process.env.RESEND_TO_EMAIL ||
+      "renow381@gmail.com";
+
+    // Cek API key
+    if (!apiKey) {
+      console.error("RESEND_API_KEY belum dikonfigurasi.");
+
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Konfigurasi email belum tersedia.",
+        },
+        { status: 500 }
+      );
+    }
+
+    // Buat Resend setelah API key tersedia
+    const resend = new Resend(apiKey);
+
     const body = await request.json();
 
     const {
@@ -16,6 +37,7 @@ export async function POST(request: Request) {
       message,
     } = body;
 
+    // Validasi form
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         {
@@ -33,16 +55,12 @@ export async function POST(request: Request) {
       message,
     });
 
+    // Kirim email
     const { data, error } =
       await resend.emails.send({
-        from:
-          process.env.RESEND_FROM_EMAIL ||
-          "Portfolio <onboarding@resend.dev>",
+        from: fromEmail,
 
-        to: [
-          process.env.RESEND_TO_EMAIL ||
-          "renow381@gmail.com",
-        ],
+        to: [toEmail],
 
         replyTo: email,
 
@@ -128,11 +146,9 @@ export async function POST(request: Request) {
         `,
       });
 
+    // Cek error Resend
     if (error) {
-      console.error(
-        "RESEND ERROR:",
-        error
-      );
+      console.error("RESEND ERROR:", error);
 
       return NextResponse.json(
         {
@@ -143,10 +159,7 @@ export async function POST(request: Request) {
       );
     }
 
-    console.log(
-      "EMAIL SENT:",
-      data
-    );
+    console.log("EMAIL SENT:", data);
 
     return NextResponse.json({
       success: true,
@@ -155,10 +168,7 @@ export async function POST(request: Request) {
     });
 
   } catch (error) {
-    console.error(
-      "SERVER ERROR:",
-      error
-    );
+    console.error("SERVER ERROR:", error);
 
     return NextResponse.json(
       {
