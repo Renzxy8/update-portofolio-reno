@@ -17,6 +17,8 @@ const projects = [
     tools: "ESP32, Arduino, LCD",
     year: "2026",
     image: "/p1.png",
+    description:
+      "Sistem monitoring sungai berbasis IoT yang dirancang untuk membantu memantau kondisi sungai secara lebih mudah. Sistem menggunakan ESP32 dan sensor untuk membaca kondisi lingkungan kemudian menampilkan informasi pada LCD.",
   },
   {
     no: "02",
@@ -26,6 +28,8 @@ const projects = [
     tools: "MariaDB, XAMPP",
     year: "2026",
     image: "/p2.png",
+    description:
+      "Proyek database koperasi yang digunakan untuk mengelola data anggota, transaksi, dan informasi koperasi. Database dibuat menggunakan MariaDB dan dikelola melalui XAMPP agar data tersusun secara terstruktur.",
   },
   {
     no: "03",
@@ -35,6 +39,8 @@ const projects = [
     tools: "Figma",
     year: "2026",
     image: "/p8.png",
+    description:
+      "Desain UI/UX untuk sistem manajemen proyek. Proyek ini berfokus pada pembuatan wireframe dan rancangan antarmuka yang sederhana agar pengguna dapat mengelola proyek, tugas, dan aktivitas dengan lebih mudah.",
   },
   {
     no: "04",
@@ -44,6 +50,8 @@ const projects = [
     tools: "Figma",
     year: "2026",
     image: "/p4.png",
+    description:
+      "TimePilot adalah konsep aplikasi mobile untuk membantu pengguna mengatur aktivitas dan waktu. Desain dibuat dengan tampilan yang sederhana, modern, dan mudah digunakan untuk membantu pengguna mengelola kegiatan sehari-hari.",
   },
   {
     no: "05",
@@ -53,6 +61,8 @@ const projects = [
     tools: "Java, NetBeans",
     year: "2026",
     image: "/p5.png",
+    description:
+      "Aplikasi kalkulator desktop yang dibuat menggunakan bahasa pemrograman Java dan NetBeans. Aplikasi ini memiliki fungsi perhitungan dasar dan dibuat sebagai latihan penerapan logika pemrograman serta pembuatan antarmuka desktop.",
   },
 ];
 
@@ -244,6 +254,10 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("Semua");
 
+  // PROJECT YANG SEDANG DIPILIH
+  const [selectedProject, setSelectedProject] =
+    useState<(typeof projects)[number] | null>(null);
+
   /* =======================================================
      FILTER PROJECT
   ======================================================= */
@@ -336,13 +350,11 @@ export default function Home() {
 
       </div>
 
-
       {/* ===================================================
           MAIN
       =================================================== */}
 
       <main className="relative z-10">
-
 
         {/* =================================================
             HERO
@@ -393,6 +405,7 @@ export default function Home() {
                   text-cyan-300
                 "
               >
+
                 <span
                   className="
                     h-px
@@ -404,8 +417,8 @@ export default function Home() {
                 />
 
                 UI/UX · CODE · DIGITAL
-              </div>
 
+              </div>
 
               <h1
                 className="
@@ -435,8 +448,8 @@ export default function Home() {
                 >
                   Reno.
                 </span>
-              </h1>
 
+              </h1>
 
               <p
                 className="
@@ -453,7 +466,6 @@ export default function Home() {
                 Saya senang mengubah ide menjadi karya yang
                 sederhana, jelas, dan mudah digunakan.
               </p>
-
 
               {/* BUTTON */}
 
@@ -484,7 +496,6 @@ export default function Home() {
                   <Arrow />
                 </a>
 
-
                 <a
                   href="#kontak"
                   className="
@@ -509,7 +520,6 @@ export default function Home() {
 
               </div>
 
-
               {/* TECHNOLOGY */}
 
               <div
@@ -533,6 +543,7 @@ export default function Home() {
                   "IoT",
                   "Database",
                 ].map((item) => (
+
                   <span
                     key={item}
                     className="
@@ -546,12 +557,12 @@ export default function Home() {
                   >
                     {item}
                   </span>
+
                 ))}
 
               </div>
 
             </div>
-
 
             {/* PROFILE IMAGE */}
 
@@ -571,7 +582,6 @@ export default function Home() {
                 "
               />
 
-
               <div
                 className="
                   cyber-glass
@@ -587,13 +597,9 @@ export default function Home() {
               >
 
                 <Corner className="left-2 top-2 border-l border-t" />
-
                 <Corner className="right-2 top-2 border-r border-t" />
-
                 <Corner className="bottom-2 left-2 border-b border-l" />
-
                 <Corner className="bottom-2 right-2 border-b border-r" />
-
 
                 <div
                   className="
@@ -619,7 +625,6 @@ export default function Home() {
                       hover:scale-105
                     "
                   />
-
 
                   <div
                     className="
@@ -665,7 +670,6 @@ export default function Home() {
 
               </div>
 
-
               {/* FOCUS */}
 
               <div
@@ -709,7 +713,6 @@ export default function Home() {
           </div>
 
         </section>
-
 
         {/* =================================================
             TENTANG
@@ -766,7 +769,6 @@ export default function Home() {
 
               </div>
 
-
               <div className="lg:col-span-8">
 
                 <p
@@ -787,7 +789,6 @@ export default function Home() {
             </div>
 
           </div>
-
 
           {/* WORKFLOW */}
 
@@ -847,7 +848,6 @@ export default function Home() {
 
                 </div>
 
-
                 <span
                   className="
                     hidden
@@ -861,7 +861,6 @@ export default function Home() {
                 </span>
 
               </div>
-
 
               <div className="mt-10 grid gap-3 md:grid-cols-5">
 
@@ -901,7 +900,6 @@ export default function Home() {
                         {step}
                       </span>
 
-
                       <span
                         className="
                           h-2
@@ -917,7 +915,6 @@ export default function Home() {
 
                     </div>
 
-
                     <h3
                       className="
                         font-display
@@ -928,7 +925,6 @@ export default function Home() {
                     >
                       {title}
                     </h3>
-
 
                     <p
                       className="
@@ -950,7 +946,6 @@ export default function Home() {
             </div>
 
           </div>
-
 
           {/* EXPERIENCE */}
 
@@ -1004,7 +999,6 @@ export default function Home() {
 
                 </div>
 
-
                 <span
                   className="
                     font-mono
@@ -1016,7 +1010,6 @@ export default function Home() {
                 </span>
 
               </div>
-
 
               <div
                 className="
@@ -1067,7 +1060,6 @@ export default function Home() {
                           0{i + 1}
                         </span>
 
-
                         <div>
 
                           <h3
@@ -1096,7 +1088,6 @@ export default function Home() {
 
                       </div>
 
-
                       <span
                         className="
                           font-mono
@@ -1120,7 +1111,6 @@ export default function Home() {
           </div>
 
         </section>
-
 
         {/* =================================================
             KARYA
@@ -1171,7 +1161,6 @@ export default function Home() {
                   02 / Portfolio
                 </p>
 
-
                 <h2
                   className="
                     mt-4
@@ -1188,7 +1177,6 @@ export default function Home() {
                   </span>
                 </h2>
 
-
                 <p
                   className="
                     mt-4
@@ -1204,7 +1192,6 @@ export default function Home() {
 
               </div>
 
-
               <p
                 className="
                   font-mono
@@ -1218,7 +1205,6 @@ export default function Home() {
               </p>
 
             </div>
-
 
             {/* SEARCH */}
 
@@ -1291,7 +1277,6 @@ export default function Home() {
 
                 </label>
 
-
                 <div
                   className="
                     flex
@@ -1318,16 +1303,15 @@ export default function Home() {
                         tracking-wider
                         transition
 
-                        ${
-                          filter === item
-                            ? `
+                        ${filter === item
+                          ? `
                               border
                               border-cyan-300/50
                               bg-cyan-400/10
                               text-cyan-200
                               shadow-[0_0_20px_rgba(34,211,238,.08)]
                             `
-                            : `
+                          : `
                               border
                               border-transparent
                               text-slate-500
@@ -1347,7 +1331,6 @@ export default function Home() {
               </div>
 
             </div>
-
 
             {/* PROJECT CARDS */}
 
@@ -1401,7 +1384,6 @@ export default function Home() {
                       "
                     />
 
-
                     <div
                       className="
                         absolute
@@ -1413,7 +1395,6 @@ export default function Home() {
                         opacity-70
                       "
                     />
-
 
                     <span
                       className="
@@ -1436,7 +1417,6 @@ export default function Home() {
                     </span>
 
                   </div>
-
 
                   <div className="p-5">
 
@@ -1462,7 +1442,6 @@ export default function Home() {
                         {project.title}
                       </h3>
 
-
                       <span
                         className="
                           font-mono
@@ -1475,7 +1454,6 @@ export default function Home() {
 
                     </div>
 
-
                     <div
                       className="
                         mt-4
@@ -1487,6 +1465,7 @@ export default function Home() {
 
                       {[project.category, project.tags].map(
                         (tag) => (
+
                           <span
                             key={tag}
                             className="
@@ -1503,11 +1482,11 @@ export default function Home() {
                           >
                             {tag}
                           </span>
+
                         )
                       )}
 
                     </div>
-
 
                     <p
                       className="
@@ -1519,6 +1498,38 @@ export default function Home() {
                       {project.tools}
                     </p>
 
+                    {/* LIHAT DETAIL */}
+
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setSelectedProject(project)
+                      }
+                      className="
+                        mt-5
+                        w-full
+                        rounded-xl
+                        border
+                        border-cyan-400/30
+                        bg-cyan-400/[.05]
+                        px-4
+                        py-3
+                        font-mono
+                        text-[10px]
+                        uppercase
+                        tracking-wider
+                        text-cyan-300
+                        transition
+                        duration-300
+                        hover:-translate-y-0.5
+                        hover:border-cyan-300/60
+                        hover:bg-cyan-400/10
+                        hover:text-white
+                      "
+                    >
+                      Lihat Detail →
+                    </button>
+
                   </div>
 
                 </article>
@@ -1526,7 +1537,6 @@ export default function Home() {
               ))}
 
             </div>
-
 
             {/* EMPTY */}
 
@@ -1555,7 +1565,6 @@ export default function Home() {
           </div>
 
         </section>
-
 
         {/* =================================================
             KEAHLIAN
@@ -1593,7 +1602,6 @@ export default function Home() {
               03 / Skills
             </p>
 
-
             <div
               className="
                 mt-4
@@ -1621,7 +1629,6 @@ export default function Home() {
                 </span>
               </h2>
 
-
               <p
                 className="
                   max-w-sm
@@ -1635,7 +1642,6 @@ export default function Home() {
               </p>
 
             </div>
-
 
             <div
               className="
@@ -1681,7 +1687,6 @@ export default function Home() {
                       "
                     />
 
-
                     <div className="relative">
 
                       <div
@@ -1702,7 +1707,6 @@ export default function Home() {
                           {number}
                         </span>
 
-
                         <span
                           className="
                             rounded-md
@@ -1722,7 +1726,6 @@ export default function Home() {
 
                       </div>
 
-
                       <h3
                         className="
                           mt-8
@@ -1735,7 +1738,6 @@ export default function Home() {
                         {title}
                       </h3>
 
-
                       <p
                         className="
                           mt-2
@@ -1746,7 +1748,6 @@ export default function Home() {
                       >
                         {desc}
                       </p>
-
 
                       <ul className="mt-6">
 
@@ -1798,7 +1799,6 @@ export default function Home() {
           </div>
 
         </section>
-
 
         {/* =================================================
             KONTAK
@@ -1862,7 +1862,6 @@ export default function Home() {
                 "
               />
 
-
               <div
                 className="
                   relative
@@ -1872,9 +1871,7 @@ export default function Home() {
                 "
               >
 
-                {/* =================================================
-                    CONTACT INFORMATION
-                ================================================= */}
+                {/* CONTACT INFORMATION */}
 
                 <div className="lg:col-span-7">
 
@@ -1889,7 +1886,6 @@ export default function Home() {
                   >
                     04 / Kontak
                   </p>
-
 
                   <h2
                     className="
@@ -1908,8 +1904,8 @@ export default function Home() {
                     <span className="text-cyan-300">
                       Sosial Media.
                     </span>
-                  </h2>
 
+                  </h2>
 
                   <p
                     className="
@@ -1922,7 +1918,6 @@ export default function Home() {
                   >
                     jika anda tertarik, anda dapat mengunjungi sosial media yang ada di bawah ini.
                   </p>
-
 
                   {/* EMAIL */}
 
@@ -1945,7 +1940,6 @@ export default function Home() {
                   >
                     renow381@gmail.com
                   </a>
-
 
                   {/* SOCIAL MEDIA */}
 
@@ -1985,7 +1979,6 @@ export default function Home() {
                             {label}
                           </span>
 
-
                           <span
                             className="
                               font-mono
@@ -2007,10 +2000,7 @@ export default function Home() {
 
                 </div>
 
-
-                {/* =================================================
-                    FORM KONTAK
-                ================================================= */}
+                {/* FORM KONTAK */}
 
                 <div className="lg:col-span-5">
 
@@ -2025,6 +2015,330 @@ export default function Home() {
           </div>
 
         </section>
+
+        {/* =================================================
+            PROJECT DETAIL MODAL
+        ================================================= */}
+
+        {selectedProject && (
+
+          <div
+            className="
+              fixed
+              inset-0
+              z-[100]
+              flex
+              items-center
+              justify-center
+              bg-slate-950/85
+              p-4
+              backdrop-blur-md
+            "
+            onClick={() =>
+              setSelectedProject(null)
+            }
+          >
+
+            <div
+              className="
+                relative
+                max-h-[90vh]
+                w-full
+                max-w-4xl
+                overflow-y-auto
+                rounded-[28px]
+                border
+                border-cyan-400/20
+                bg-[#0b1018]
+                p-3
+                shadow-[0_0_80px_rgba(34,211,238,.12)]
+                sm:p-5
+              "
+              onClick={(e) =>
+                e.stopPropagation()
+              }
+            >
+
+              {/* TOMBOL X */}
+
+              <button
+                type="button"
+                onClick={() =>
+                  setSelectedProject(null)
+                }
+                className="
+                  absolute
+                  right-5
+                  top-5
+                  z-10
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-white/10
+                  bg-black/60
+                  text-xl
+                  text-white/60
+                  backdrop-blur-md
+                  transition
+                  hover:border-cyan-400/40
+                  hover:bg-cyan-400/10
+                  hover:text-white
+                "
+                aria-label="Tutup"
+              >
+                ×
+              </button>
+
+              {/* GAMBAR PROJECT */}
+
+              <div
+                className="
+                  relative
+                  aspect-video
+                  w-full
+                  overflow-hidden
+                  rounded-2xl
+                  border
+                  border-white/[.08]
+                  bg-black/30
+                "
+              >
+
+                <Image
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  fill
+                  className="object-contain p-2"
+                  sizes="(max-width: 768px) 100vw, 900px"
+                  priority
+                />
+
+              </div>
+
+              {/* DETAIL */}
+
+              <div className="px-2 pb-2 pt-7 sm:px-4 sm:pt-8">
+
+                <div
+                  className="
+                    flex
+                    flex-col
+                    gap-4
+                    sm:flex-row
+                    sm:items-start
+                    sm:justify-between
+                  "
+                >
+
+                  <div>
+
+                    <p
+                      className="
+                        font-mono
+                        text-[10px]
+                        uppercase
+                        tracking-[.3em]
+                        text-cyan-300
+                      "
+                    >
+                      Project Detail
+                    </p>
+
+                    <h2
+                      className="
+                        mt-3
+                        text-3xl
+                        font-bold
+                        tracking-tight
+                        text-white
+                        sm:text-4xl
+                      "
+                    >
+                      {selectedProject.title}
+                    </h2>
+
+                  </div>
+
+                  <span
+                    className="
+                      w-fit
+                      rounded-full
+                      border
+                      border-white/10
+                      bg-white/[.03]
+                      px-3
+                      py-1.5
+                      font-mono
+                      text-[10px]
+                      text-white/40
+                    "
+                  >
+                    {selectedProject.year}
+                  </span>
+
+                </div>
+
+                {/* CATEGORY & TAG */}
+
+                <div className="mt-6 flex flex-wrap gap-2">
+
+                  <span
+                    className="
+                      rounded-full
+                      border
+                      border-cyan-400/20
+                      bg-cyan-400/[.05]
+                      px-3
+                      py-1.5
+                      font-mono
+                      text-[9px]
+                      uppercase
+                      tracking-wider
+                      text-cyan-300
+                    "
+                  >
+                    {selectedProject.category}
+                  </span>
+
+                  <span
+                    className="
+                      rounded-full
+                      border
+                      border-white/10
+                      bg-white/[.03]
+                      px-3
+                      py-1.5
+                      font-mono
+                      text-[9px]
+                      uppercase
+                      tracking-wider
+                      text-white/40
+                    "
+                  >
+                    #{selectedProject.tags}
+                  </span>
+
+                </div>
+
+                {/* PENJELASAN */}
+
+                <div className="mt-8">
+
+                  <h3
+                    className="
+                      font-mono
+                      text-[10px]
+                      uppercase
+                      tracking-[.2em]
+                      text-white/35
+                    "
+                  >
+                    Tentang Project
+                  </h3>
+
+                  <p
+                    className="
+                      mt-3
+                      text-sm
+                      leading-8
+                      text-white/60
+                      sm:text-base
+                    "
+                  >
+                    {selectedProject.description}
+                  </p>
+
+                </div>
+
+                {/* TOOLS */}
+
+                <div className="mt-8">
+
+                  <h3
+                    className="
+                      font-mono
+                      text-[10px]
+                      uppercase
+                      tracking-[.2em]
+                      text-white/35
+                    "
+                  >
+                    Tools & Technology
+                  </h3>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+
+                    {selectedProject.tools
+                      .split(",")
+                      .map((tool) => (
+
+                        <span
+                          key={tool}
+                          className="
+                            rounded-lg
+                            border
+                            border-white/10
+                            bg-white/[.03]
+                            px-4
+                            py-2
+                            text-sm
+                            text-white/60
+                          "
+                        >
+                          {tool.trim()}
+                        </span>
+
+                      ))}
+
+                  </div>
+
+                </div>
+
+                {/* TOMBOL TUTUP */}
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    setSelectedProject(null)
+                  }
+                  className="
+                    mt-9
+                    w-full
+                    rounded-xl
+                    bg-cyan-400
+                    px-5
+                    py-3.5
+                    font-mono
+                    text-[10px]
+                    font-bold
+                    uppercase
+                    tracking-widest
+                    text-slate-950
+                    transition
+                    hover:bg-cyan-300
+                  "
+                >
+                  Tutup Detail
+                </button>
+
+              </div>
+
+              {/* CORNER DECORATION */}
+
+              <Corner className="left-3 top-3 border-l border-t" />
+              <Corner className="right-3 top-3 border-r border-t" />
+              <Corner className="bottom-3 left-3 border-b border-l" />
+              <Corner className="bottom-3 right-3 border-b border-r" />
+
+            </div>
+
+          </div>
+
+        )}
 
       </main>
 
