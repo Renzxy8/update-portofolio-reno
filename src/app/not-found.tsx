@@ -18,7 +18,7 @@ export default function NotFound() {
 
         <Link
           href="/"
-          className="mt-8 inline-flex rounded-full bg-gradient-to-r from-[#0EA5E9] to-[#6366F1] px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-1"
+          className="mt-8 inline-flex rounded-full bg-linear-to-r from-[#0EA5E9] to-[#6366F1] px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-1"
         >
           Kembali ke beranda
         </Link>

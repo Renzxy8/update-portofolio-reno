@@ -299,8 +299,8 @@ export default function Home() {
             absolute
             -left-40
             top-20
-            h-[520px]
-            w-[520px]
+            h-130
+            w-130
             rounded-full
             bg-cyan-500/10
             blur-[130px]
@@ -313,8 +313,8 @@ export default function Home() {
             absolute
             -right-40
             top-[30%]
-            h-[560px]
-            w-[560px]
+            h-140
+            w-140
             rounded-full
             bg-violet-600/10
             blur-[140px]
@@ -327,8 +327,8 @@ export default function Home() {
             absolute
             bottom-[8%]
             left-[38%]
-            h-[500px]
-            w-[500px]
+            h-125
+            w-125
             rounded-full
             bg-blue-600/10
             blur-[130px]
@@ -410,7 +410,7 @@ export default function Home() {
                   className="
                     h-px
                     w-10
-                    bg-gradient-to-r
+                    bg-linear-to-r
                     from-cyan-300
                     to-violet-400
                   "
@@ -438,7 +438,7 @@ export default function Home() {
 
                 <span
                   className="
-                    bg-gradient-to-r
+                    bg-linear-to-r
                     from-cyan-300
                     via-blue-400
                     to-violet-400
@@ -574,7 +574,7 @@ export default function Home() {
                   absolute
                   -inset-6
                   rounded-[40px]
-                  bg-gradient-to-br
+                  bg-linear-to-br
                   from-cyan-400/10
                   via-transparent
                   to-violet-500/15
@@ -588,8 +588,8 @@ export default function Home() {
                   neon-border
                   relative
                   mx-auto
-                  aspect-[4/5]
-                  max-w-[390px]
+                  aspect-4/5
+                  max-w-97.5
                   overflow-hidden
                   rounded-[30px]
                   p-2
@@ -631,7 +631,7 @@ export default function Home() {
                       absolute
                       inset-x-0
                       bottom-0
-                      bg-gradient-to-t
+                      bg-linear-to-t
                       from-[#020617]
                       via-[#020617]/70
                       to-transparent
@@ -1034,7 +1034,7 @@ export default function Home() {
                         px-3
                         py-6
                         transition
-                        hover:bg-cyan-400/[.025]
+                        hover:bg-cyan-400/2.5
                         sm:flex-row
                         sm:items-center
                         sm:justify-between
@@ -1362,7 +1362,7 @@ export default function Home() {
                   <div
                     className="
                       relative
-                      aspect-[16/9]
+                      aspect-video
                       overflow-hidden
                       border-b
                       border-slate-800
@@ -1388,7 +1388,7 @@ export default function Home() {
                       className="
                         absolute
                         inset-0
-                        bg-gradient-to-t
+                        bg-linear-to-t
                         from-slate-950
                         via-transparent
                         to-transparent
@@ -1472,7 +1472,7 @@ export default function Home() {
                               rounded-md
                               border
                               border-violet-400/15
-                              bg-violet-500/[.05]
+                              bg-violet-500/5
                               px-2
                               py-1
                               font-mono
@@ -1511,7 +1511,7 @@ export default function Home() {
                         rounded-xl
                         border
                         border-cyan-400/30
-                        bg-cyan-400/[.05]
+                        bg-cyan-400/5
                         px-4
                         py-3
                         font-mono
@@ -1966,7 +1966,7 @@ export default function Home() {
                             py-3
                             transition
                             hover:border-cyan-400/35
-                            hover:bg-cyan-400/[.03]
+                            hover:bg-cyan-400/3
                           "
                         >
 
@@ -2026,7 +2026,7 @@ export default function Home() {
             className="
               fixed
               inset-0
-              z-[100]
+              z-100
               flex
               items-center
               justify-center
@@ -2103,7 +2103,7 @@ export default function Home() {
                   overflow-hidden
                   rounded-2xl
                   border
-                  border-white/[.08]
+                  border-white/8
                   bg-black/30
                 "
               >
@@ -2169,7 +2169,7 @@ export default function Home() {
                       rounded-full
                       border
                       border-white/10
-                      bg-white/[.03]
+                      bg-white/3
                       px-3
                       py-1.5
                       font-mono
@@ -2191,7 +2191,7 @@ export default function Home() {
                       rounded-full
                       border
                       border-cyan-400/20
-                      bg-cyan-400/[.05]
+                      bg-cyan-400/5
                       px-3
                       py-1.5
                       font-mono
@@ -2209,7 +2209,7 @@ export default function Home() {
                       rounded-full
                       border
                       border-white/10
-                      bg-white/[.03]
+                      bg-white/3
                       px-3
                       py-1.5
                       font-mono
@@ -2282,7 +2282,7 @@ export default function Home() {
                             rounded-lg
                             border
                             border-white/10
-                            bg-white/[.03]
+                            bg-white/3
                             px-4
                             py-2
                             text-sm
