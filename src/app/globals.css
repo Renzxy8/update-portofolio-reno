@@ -36,3 +36,88 @@ body { margin: 0; background: #020617; color: var(--foreground); font-family: va
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+/* =========================================================
+   RESPONSIVE SAFETY
+   Menjaga tampilan desktop tetap sama, sekaligus mencegah
+   overflow pada layar kecil/mobile.
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  main,
+  section,
+  article,
+  header,
+  footer,
+  nav,
+  div {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span,
+  li {
+    overflow-wrap: anywhere;
+  }
+
+  .cyber-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .cyber-glass,
+  .cyber-card {
+    max-width: 100%;
+  }
+
+  /* Tetap mempertahankan aspect ratio gambar,
+     tetapi tidak membiarkan gambar melewati layar. */
+  img {
+    height: auto;
+  }
+}
+
+@media (max-width: 374px) {
+  /* Layar yang sangat kecil: hanya mengurangi ruang luar,
+     bukan mengubah desain/komponen. */
+  .cyber-page main > section > div,
+  .cyber-page main > section > div > div {
+    max-width: 100%;
+  }
+}
