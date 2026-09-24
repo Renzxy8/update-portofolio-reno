@@ -56,7 +56,7 @@ export default function Navbar() {
       <div className="relative mx-auto flex h-[68px] max-w-6xl items-center justify-between px-4 sm:px-10 md:px-6">
         <a href="#beranda" onClick={closeMenu} className="group flex min-w-0 items-center gap-3">
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-cyan-300/40 bg-cyan-400/10 font-display text-lg font-semibold text-cyan-200 shadow-[0_0_22px_rgba(34,211,238,.08)]">R</span>
-          <span className="truncate font-display text-base font-semibold text-slate-100">Reno Wahyu<span className="text-cyan-300">.</span></span>
+          <span className="truncate font-display text-base font-semibold text-slate-100">Reno Wahyu Saputra<span className="text-cyan-300">.</span></span>
         </a>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Navigasi utama">
