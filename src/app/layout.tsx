@@ -1,9 +1,10 @@
+
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { siteConfig } from "@/root";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { siteConfig } from "@/lib/constants";
 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-display", weight: ["300", "400", "500", "600"], style: ["normal", "italic"] });
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
@@ -22,5 +23,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Footer />
       </body>
     </html>
+    
   );
 }
