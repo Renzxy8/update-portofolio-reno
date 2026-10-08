@@ -25,8 +25,8 @@ export async function createSupabaseServerClient() {
               }
             );
           } catch {
-            // Server Component tidak selalu
-            // dapat mengubah cookie.
+            // Cookie tidak dapat diubah
+            // dari Server Component.
           }
         },
       },
